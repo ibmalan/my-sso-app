@@ -14,4 +14,26 @@
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+	
+	
+<security-constraint>
+     <display-name>ANNUAIRECLOUD</display-name>
+     <web-resource-collection>    
+           <web-resource-name>ALLACT</web-resource-name>
+           <url-pattern>/</url-pattern>
+           <url-pattern>/*</url-pattern>
+           <url-pattern>/my-sso-app/*</url-pattern>
+           <http-method>GET</http-method>
+           <http-method>PUT</http-method>
+           <http-method>HEAD</http-method>
+           <http-method>TRACE</http-method>
+           <http-method>POST</http-method>
+           <http-method>DELETE</http-method>
+           <http-method>OPTIONS</http-method>
+     </web-resource-collection>
+     <auth-constraint>
+           <role-name>ALLACT</role-name>
+     </auth-constraint>
+</security-constraint>
+ 
 </web-app>
